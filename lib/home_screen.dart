@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -54,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         const Center(
             child: Text(
-          "Saron Ranger",
+          "Suraj Yadav",
           style: TextStyle(
               fontSize: 39, fontWeight: FontWeight.bold, color: Colors.white),
         )),
@@ -63,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         const Center(
           child: Text(
-            "Flutter Developer & God",
+            "Flutter Developer & CSE Studnet",
             style: TextStyle(
                 fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
           ),
@@ -73,7 +75,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Center(
           child: MaterialButton(
-            onPressed: () {},
+            onPressed: () {
+              launchUrlString("https://github.com/suraj-yadav0");
+            },
             color: Colors.white,
             child: const Text(
               "Hire Me",
