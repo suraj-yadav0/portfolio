@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/details_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -37,10 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 400,
           width: double.infinity,
           color: Colors.black,
-          child: Image.network(
-            "https://www.worldwide.com/wp-content/uploads/2020/10/Derek-Ansel.png",
-            fit: BoxFit.cover,
-          ),
+          child: Image.asset("assets/profile.png",fit: BoxFit.cover,),
+          // child: Image.network(
+          //   "https://www.worldwide.com/wp-content/uploads/2020/10/Derek-Ansel.png",
+          //   fit: BoxFit.cover,
+          // ),
         ),
         const SizedBox(
           height: 20,
@@ -76,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Center(
           child: MaterialButton(
             onPressed: () {
-              launchUrlString("https://github.com/suraj-yadav0");
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const DetailScreen()));
             },
             color: Colors.white,
             child: const Text(
